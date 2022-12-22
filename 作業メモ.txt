@@ -1,0 +1,91 @@
+# github登録
+https://github.com/EibaKatsu/BaronsCollection
+
+# clone作成
+git clone https://github.com/EibaKatsu/BaronsCollection.git
+
+# git 初期化
+git init
+
+# git 関連表示
+git remote -v
+
+# githubリポジトリに紐づけ
+git remote add origin https://github.com/EibaKatsu/BaronsCollection.git
+
+# githubリポジトリ削除
+git remote remove origin
+
+# ブランチの作成
+git branch -M main
+
+# npm 初期化
+npm init --yes
+
+# harthatインストール
+npm install --save-dev hardhat
+
+
+
+
+
+
+
+# harthatインストール
+npm install --save-dev hardhat
+
+# hardhat設定ファイル作成
+npx hardhat
+　→「Create an empty hardhat.config.js」を選択。残りは全て y
+
+# プラグイン追加
+npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
+
+# openzeppelinをインストール
+npm install @openzeppelin/contracts
+
+# コンパイル
+npx hardhat compile
+
+## テスト準備
+# 必要なパッケージのインストール
+npm install --save mocha ganache-cli web3
+npm install --save-dev @nomicfoundation/hardhat-network-helpers
+
+# testフォルダ配下にテストコードを記載
+
+# harhat.config.jsに以下を追加
+    require("@nomiclabs/hardhat-waffle");
+
+# テスト実行
+npx hardhat test
+
+# DOTENVインストール
+npm install dotenv --save
+
+# hardhat関連のインストール
+npm install @nomicfoundation/hardhat-toolbox
+
+# デプロイ
+npx hardhat run scripts/deploy.js --network goerli
+
+# コントラクトアドレス
+# 0xad44aD4DaF3B1241b192d8B984Ed972424104eE8
+
+# rinkeby etherscan
+https://rinkeby.etherscan.io/address/0xad44ad4daf3b1241b192d8b984ed972424104ee8#code
+
+# verify用のライブラリインストール
+npm install --save-dev @nomiclabs/hardhat-etherscan
+
+# https://etherscan.io/myapikey にてAPIKeyを発行
+
+# verify
+npx hardhat verify --network goerli 0xAE00EB7030f2E4206e1DB42CEe86287bd8e0b0fB
+npx hardhat verify  --constructor-args scripts/argument.js --network goerli 0xAE00EB7030f2E4206e1DB42CEe86287bd8e0b0fB
+
+npm uninstall @nomiclabs/hardhat-waffle ethereum-waffle
+npm install --save-dev @nomicfoundation/hardhat-chai-matchers
+
+# ガス代試算用
+npm install hardhat-gas-reporter --save-dev
