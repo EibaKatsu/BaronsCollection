@@ -25,12 +25,6 @@ npm init --yes
 # harthatインストール
 npm install --save-dev hardhat
 
-
-
-
-
-
-
 # harthatインストール
 npm install --save-dev hardhat
 
@@ -44,6 +38,12 @@ npm install --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffl
 # openzeppelinをインストール
 npm install @openzeppelin/contracts
 
+
+
+
+
+
+######## まだやっていない
 # コンパイル
 npx hardhat compile
 
