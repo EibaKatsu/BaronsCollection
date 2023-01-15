@@ -1,1 +1,1 @@
-# BaronsCollection
+# NftCollection
