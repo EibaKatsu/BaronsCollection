@@ -25,9 +25,6 @@ npm init --yes
 # harthatインストール
 npm install --save-dev hardhat
 
-# harthatインストール
-npm install --save-dev hardhat
-
 # hardhat設定ファイル作成
 npx hardhat
 　→「Create an empty hardhat.config.js」を選択。残りは全て y

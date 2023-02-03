@@ -6,8 +6,9 @@ import "@openzeppelin/contracts/token/common/ERC2981.sol";
 import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./opensea/DefaultOperatorFilterer.sol";
+import "./Base64.sol";
 
-abstract contract ERC721WithOperatorFilter is
+abstract contract ERC721WithOperatorFilterSVG is
     ERC721URIStorage,
     ERC2981,
     AccessControlEnumerable,
@@ -17,16 +18,18 @@ abstract contract ERC721WithOperatorFilter is
     bytes32 public constant CONTRACT_ADMIN = keccak256("CONTRACT_ADMIN");
     uint256 public currentTokenId;
 
-    ////////// Access Control //////////
+    ////////// modifiers //////////
     modifier onlyAdminOrOwner() {
         require(hasAdminOrOwner(), "caller is not the admin");
         _;
     }
 
+    ////////// internal functions start //////////
     function hasAdminOrOwner() internal view returns (bool) {
         return owner() == _msgSender() || hasRole(CONTRACT_ADMIN, _msgSender());
     }
 
+    ////////// onlyOwner functions start //////////
     function setAdminRole(address[] memory _administrators)
         external
         onlyAdminOrOwner
@@ -45,7 +48,6 @@ abstract contract ERC721WithOperatorFilter is
         }
     }
 
-    ////////// OperatorFilter //////////
     function setApprovalForAll(address operator, bool approved)
         public
         virtual
@@ -89,51 +91,54 @@ abstract contract ERC721WithOperatorFilter is
         super.safeTransferFrom(from, to, tokenId, data);
     }
 
-    ////////// ERC2981 functions start //////////
     function setDefaultRoyalty(address payable recipient, uint96 value)
-        external
+        public
         onlyAdminOrOwner
     {
         _setDefaultRoyalty(recipient, value);
     }
 
-    function deleteDefaultRoyalty() external onlyAdminOrOwner {
-        _deleteDefaultRoyalty();
-    }
-
-    function setTokenRoyalty(
+    function setTokenURI(
         uint256 tokenId,
-        address receiver,
-        uint96 feeNumerator
-    ) external onlyAdminOrOwner {
-        _setTokenRoyalty(tokenId, receiver, feeNumerator);
-    }
+        string memory _encodedData,
+        string memory _name,
+        string memory _description
+    ) public virtual onlyAdminOrOwner {
+        string memory _tokenURI;
 
-    function resetTokenRoyalty(uint256 tokenId) external onlyAdminOrOwner {
-        _resetTokenRoyalty(tokenId);
-    }
+        _tokenURI = string(
+            abi.encodePacked(
+                "data:application/json;base64,",
+                Base64.encode(
+                    bytes(
+                        abi.encodePacked(
+                            '{"name": "',
+                            _name,
+                            '", "description": "',
+                            _description,
+                            '", "image": "data:image/svg+xml;base64,',
+                            _encodedData,
+                            '"}'
+                        )
+                    )
+                )
+            )
+        );
 
-    ////////// Original functions start //////////
-    function setTokenURI(uint256 tokenId, string memory _tokenURI)
-        external
-        virtual
-        onlyAdminOrOwner
-    {
         _setTokenURI(tokenId, _tokenURI);
     }
 
-    function createToken(address _to, string memory _tokenURI)
-        public
-        virtual
-        onlyAdminOrOwner
-    {
-        currentTokenId++;
-        uint256 _tokenId = currentTokenId;
+    function createToken(
+        address _to,
+        string memory _encodedData,
+        string memory _name,
+        string memory _description
+    ) public virtual onlyAdminOrOwner returns (uint256 _tokenId) {
+        _tokenId = ++currentTokenId;
         _safeMint(_to, _tokenId);
-        _setTokenURI(_tokenId, _tokenURI);
+        setTokenURI(_tokenId, _encodedData, _name, _description);
     }
 
-    ////////// supportsInterface //////////
     function supportsInterface(bytes4 interfaceId)
         public
         view

@@ -13,7 +13,7 @@ contract CryptoNinjaMosaic is ERC721WithOperatorFilter {
         ERC721("CryptoNinjaMosaic", "CNM")
     {
         _setRoleAdmin(CONTRACT_ADMIN, CONTRACT_ADMIN);
-        setDefaultRoyalty(payable(0x52A76a606AC925f7113B4CC8605Fe6bCad431EbB), 1000);
+        _setDefaultRoyalty(payable(0x52A76a606AC925f7113B4CC8605Fe6bCad431EbB), 1000);
 
         for (uint256 i = 0; i < _administrators.length; i++) {
             _setupRole(CONTRACT_ADMIN, _administrators[i]);

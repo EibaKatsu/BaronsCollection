@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/contracts/BaronsCollection.sol": {
-      "lastModificationDate": 1671926080323,
-      "contentHash": "6888a13d0946006577047d0d499a9ae8",
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/BaronsCollection.sol": {
+      "lastModificationDate": 1675207598210,
+      "contentHash": "b81abc0643eb5efc7d9e7dbf47878f0f",
       "sourceName": "contracts/BaronsCollection.sol",
       "solcConfig": {
         "version": "0.8.17",
@@ -33,17 +33,208 @@
         "@openzeppelin/contracts/token/common/ERC2981.sol",
         "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
         "@openzeppelin/contracts/access/Ownable.sol",
-        "./packages/opensea/DefaultOperatorFilterer.sol"
+        "./packages/ERC721WithOperatorFilter.sol"
       ],
       "versionPragmas": [
         "^0.8.14"
       ],
       "artifacts": [
-        "BaronsCollection",
+        "BaronsCollection"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/packages/ERC721WithOperatorFilter.sol": {
+      "lastModificationDate": 1675207539551,
+      "contentHash": "eed117faa55e218359093b6d18fc0e82",
+      "sourceName": "contracts/packages/ERC721WithOperatorFilter.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/token/common/ERC2981.sol",
+        "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./opensea/DefaultOperatorFilterer.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
         "ERC721WithOperatorFilter"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/contracts/packages/opensea/DefaultOperatorFilterer.sol": {
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol": {
+      "lastModificationDate": 1671754101108,
+      "contentHash": "b6d9b165dc57e9ad8153bdca05c783a4",
+      "sourceName": "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControlEnumerable.sol",
+        "./AccessControl.sol",
+        "../utils/structs/EnumerableSet.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControlEnumerable"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1671754101120,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/common/ERC2981.sol": {
+      "lastModificationDate": 1671754101112,
+      "contentHash": "f995d6f70022823e60e85f41959c801d",
+      "sourceName": "@openzeppelin/contracts/token/common/ERC2981.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IERC2981.sol",
+        "../../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC2981"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
+      "lastModificationDate": 1671754101114,
+      "contentHash": "8af32effd0536e2971ff8496812a5016",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721URIStorage"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/packages/opensea/DefaultOperatorFilterer.sol": {
       "lastModificationDate": 1671889444235,
       "contentHash": "8c26dab103c61354669e3b8b3f3540ab",
       "sourceName": "contracts/packages/opensea/DefaultOperatorFilterer.sol",
@@ -80,7 +271,442 @@
         "DefaultOperatorFilterer"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/packages/opensea/OperatorFilterer.sol": {
+      "lastModificationDate": 1671889444236,
+      "contentHash": "c3ba722423be23ee8cac1846e4321bf1",
+      "sourceName": "contracts/packages/opensea/OperatorFilterer.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IOperatorFilterRegistry.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "OperatorFilterer"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/packages/opensea/IOperatorFilterRegistry.sol": {
+      "lastModificationDate": 1671889444236,
+      "contentHash": "652a9aac07540f920ace3eb2d07c998c",
+      "sourceName": "contracts/packages/opensea/IOperatorFilterRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IOperatorFilterRegistry"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/access/IAccessControlEnumerable.sol": {
+      "lastModificationDate": 1671754101115,
+      "contentHash": "4e71cc90682e109e999ce2bd329f6572",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControlEnumerable.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControlEnumerable"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1671754101108,
+      "contentHash": "95a6c227d1b8843e9385518a5bce4853",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/Strings.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+      "lastModificationDate": 1671754101110,
+      "contentHash": "6116ca703456923afc88ce24b466ac80",
+      "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1671754101115,
+      "contentHash": "57c84298234411cea19c7c284d86be8b",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1671754101109,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1671754101111,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1671754101121,
+      "contentHash": "396031251978f8febfd90cb62cb240ec",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1671754101117,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
+      "lastModificationDate": 1671754101119,
+      "contentHash": "b9c58920ce74d6dc819161786112e7ee",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol": {
+      "lastModificationDate": 1671754101118,
+      "contentHash": "608566bc5327454ba54e487e7c226ff6",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC2981.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC2981"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
       "lastModificationDate": 1671754101113,
       "contentHash": "190f627b9302b9602d3a313e28205cc5",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
@@ -123,193 +749,7 @@
         "ERC721"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/token/common/ERC2981.sol": {
-      "lastModificationDate": 1671754101112,
-      "contentHash": "f995d6f70022823e60e85f41959c801d",
-      "sourceName": "@openzeppelin/contracts/token/common/ERC2981.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../../interfaces/IERC2981.sol",
-        "../../utils/introspection/ERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC2981"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/access/AccessControlEnumerable.sol": {
-      "lastModificationDate": 1671754101108,
-      "contentHash": "b6d9b165dc57e9ad8153bdca05c783a4",
-      "sourceName": "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IAccessControlEnumerable.sol",
-        "./AccessControl.sol",
-        "../utils/structs/EnumerableSet.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControlEnumerable"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1671754101120,
-      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Ownable"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/contracts/packages/opensea/OperatorFilterer.sol": {
-      "lastModificationDate": 1671889444236,
-      "contentHash": "c3ba722423be23ee8cac1846e4321bf1",
-      "sourceName": "contracts/packages/opensea/OperatorFilterer.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IOperatorFilterRegistry.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "OperatorFilterer"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/contracts/packages/opensea/IOperatorFilterRegistry.sol": {
-      "lastModificationDate": 1671889444236,
-      "contentHash": "652a9aac07540f920ace3eb2d07c998c",
-      "sourceName": "contracts/packages/opensea/IOperatorFilterRegistry.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "IOperatorFilterRegistry"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1671754101108,
       "contentHash": "f31ad6fc4bbf9c06203987220156a6ba",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
@@ -344,114 +784,7 @@
         "Address"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1671754101109,
-      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
-      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1671754101121,
-      "contentHash": "396031251978f8febfd90cb62cb240ec",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./math/Math.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1671754101118,
-      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC721Receiver"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
       "lastModificationDate": 1671754101118,
       "contentHash": "eb7e61db29f31d88b3c1cef1b063d338",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
@@ -488,10 +821,10 @@
         "IERC721"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1671754101111,
-      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1671754101118,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -515,17 +848,15 @@
           }
         }
       },
-      "imports": [
-        "./IERC165.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "ERC165"
+        "IERC721Receiver"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
       "lastModificationDate": 1671754101118,
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
@@ -562,10 +893,52 @@
         "IERC721Metadata"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
-      "lastModificationDate": 1671754101119,
-      "contentHash": "b9c58920ce74d6dc819161786112e7ee",
-      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/packages/ERC721WithOperatorFilterSVG.sol": {
+      "lastModificationDate": 1673765177704,
+      "contentHash": "ec7cb997061ea960ea03825b53967f5f",
+      "sourceName": "contracts/packages/ERC721WithOperatorFilterSVG.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/token/common/ERC2981.sol",
+        "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./opensea/DefaultOperatorFilterer.sol",
+        "./Base64.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.14"
+      ],
+      "artifacts": [
+        "ERC721WithOperatorFilterSVG"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/packages/Base64.sol": {
+      "lastModificationDate": 1673762502074,
+      "contentHash": "8d023f5479a7fb1364ff088577ad934e",
+      "sourceName": "contracts/packages/Base64.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -594,13 +967,93 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "Math"
+        "Base64"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1671754101117,
-      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/CryptoNinjaMosaic.sol": {
+      "lastModificationDate": 1675255984061,
+      "contentHash": "46dd801aa86d642368f89effd7c084b6",
+      "sourceName": "contracts/CryptoNinjaMosaic.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/token/common/ERC2981.sol",
+        "@openzeppelin/contracts/access/AccessControlEnumerable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./packages/ERC721WithOperatorFilter.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.17"
+      ],
+      "artifacts": [
+        "CryptoNinjaMosaic"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/CryptoNFTOujiClub_org.sol": {
+      "lastModificationDate": 1673764036585,
+      "contentHash": "1d929724c650140ed2dd1f452ba8fbbb",
+      "sourceName": "contracts/CryptoNFTOujiClub_org.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "./Base64.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "CryptoNFTOujiClub"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/Base64.sol": {
+      "lastModificationDate": 1675255956535,
+      "contentHash": "2a09e34fa2971d19cec6a17e8fee5be2",
+      "sourceName": "contracts/Base64.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -629,13 +1082,51 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "IERC165"
+        "Base64"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/interfaces/IERC2981.sol": {
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
+      "lastModificationDate": 1671754101113,
+      "contentHash": "212e86880d210b6cac8c3eb0cd6b1fad",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721.sol",
+        "./IERC721Enumerable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Enumerable"
+      ]
+    },
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
       "lastModificationDate": 1671754101118,
-      "contentHash": "608566bc5327454ba54e487e7c226ff6",
-      "sourceName": "@openzeppelin/contracts/interfaces/IERC2981.sol",
+      "contentHash": "f4dd06783f321aa26179bc2b6e361c29",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -660,19 +1151,19 @@
         }
       },
       "imports": [
-        "../utils/introspection/IERC165.sol"
+        "../IERC721.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "IERC2981"
+        "IERC721Enumerable"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/access/IAccessControlEnumerable.sol": {
-      "lastModificationDate": 1671754101115,
-      "contentHash": "4e71cc90682e109e999ce2bd329f6572",
-      "sourceName": "@openzeppelin/contracts/access/IAccessControlEnumerable.sol",
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/SampleSVG.sol": {
+      "lastModificationDate": 1673765315864,
+      "contentHash": "4d30c4c046b3dd5b5cd87792231ff3b5",
+      "sourceName": "contracts/SampleSVG.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -697,59 +1188,19 @@
         }
       },
       "imports": [
-        "./IAccessControl.sol"
+        "./packages/ERC721WithOperatorFilterSVG.sol"
       ],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.17"
       ],
       "artifacts": [
-        "IAccessControlEnumerable"
+        "SampleSVG"
       ]
     },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
-      "lastModificationDate": 1671754101108,
-      "contentHash": "95a6c227d1b8843e9385518a5bce4853",
-      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IAccessControl.sol",
-        "../utils/Context.sol",
-        "../utils/Strings.sol",
-        "../utils/introspection/ERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControl"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
-      "lastModificationDate": 1671754101110,
-      "contentHash": "6116ca703456923afc88ce24b466ac80",
-      "sourceName": "@openzeppelin/contracts/utils/structs/EnumerableSet.sol",
+    "/Users/eibakatsu/Dev/NFTCollection/NFTCollection/contracts/flatten/CryptoNinjaMosaicFlatten.sol": {
+      "lastModificationDate": 1673564493047,
+      "contentHash": "41d03aa7c4ceec2ed5e43e682ca62f16",
+      "sourceName": "contracts/flatten/CryptoNinjaMosaicFlatten.sol",
       "solcConfig": {
         "version": "0.8.17",
         "settings": {
@@ -775,82 +1226,56 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.0"
+        "^0.8.13",
+        "^0.8.13",
+        "^0.8.13",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.1",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.0",
+        "^0.8.14",
+        "^0.8.14"
       ],
       "artifacts": [
-        "EnumerableSet"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
-      "lastModificationDate": 1671754101115,
-      "contentHash": "57c84298234411cea19c7c284d86be8b",
-      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControl"
-      ]
-    },
-    "/Users/eibakatsu/Dev/UedaBaron/BaronsCollection/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
-      "lastModificationDate": 1671754101114,
-      "contentHash": "8af32effd0536e2971ff8496812a5016",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
-      "solcConfig": {
-        "version": "0.8.17",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../ERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC721URIStorage"
+        "AccessControl",
+        "AccessControlEnumerable",
+        "Address",
+        "Context",
+        "CryptoNinjaMosaic",
+        "DefaultOperatorFilterer",
+        "ERC165",
+        "ERC2981",
+        "ERC721",
+        "ERC721URIStorage",
+        "ERC721WithOperatorFilter",
+        "EnumerableSet",
+        "IAccessControl",
+        "IAccessControlEnumerable",
+        "IERC165",
+        "IERC2981",
+        "IERC721",
+        "IERC721Metadata",
+        "IERC721Receiver",
+        "IOperatorFilterRegistry",
+        "Math",
+        "OperatorFilterer",
+        "Ownable",
+        "Strings"
       ]
     }
   }
