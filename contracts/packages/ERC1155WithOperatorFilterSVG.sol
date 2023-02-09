@@ -23,6 +23,7 @@ abstract contract ERC1155WithOperatorFilterSVG is
         uint256 maxSupply;
         uint256 cost;
         string svg;
+        bool isEncoded;
     }
 
     uint256 private _currentTokenID = 0;
@@ -33,16 +34,23 @@ abstract contract ERC1155WithOperatorFilterSVG is
     // Contract symbol
     string public symbol;
 
-    constructor(string memory _name, string memory _symbol) ERC1155(''){
+    constructor(string memory _name, string memory _symbol) ERC1155("") {
         name = _name;
         symbol = _symbol;
     }
-    
+
     function uri(uint256 _id) public view override returns (string memory) {
         require(
             _exists(_id),
             "ERC1155WithOperatorFilterSVG#uri: NONEXISTENT_TOKEN"
         );
+
+        string memory _svg;
+        if (tokenInfos[_id].isEncoded) {
+            _svg = tokenInfos[_id].svg;
+        } else {
+            _svg = Base64.encode(bytes(tokenInfos[_id].svg));
+        }
 
         return
             string(
@@ -51,16 +59,21 @@ abstract contract ERC1155WithOperatorFilterSVG is
                     Base64.encode(
                         bytes(
                             abi.encodePacked(
-                                '{"name": "#',
+                                '{"name": "',
                                 symbol,
-                                " ",
+                                ' #',
                                 _id,
                                 '", "description": "',
-                                "This is the collaboration NFT between pNounsDAO and NounsDAO Japan #",
+                                'This is the collaboration NFT between pNounsDAO and NounsDAO Japan #',
                                 _id,
                                 '.", "image": "data:image/svg+xml;base64,',
-                                Base64.encode(bytes(tokenInfos[_id].svg)),
+                                _svg,
                                 '"}'
+
+
+
+
+                                
                             )
                         )
                     )
@@ -123,12 +136,17 @@ abstract contract ERC1155WithOperatorFilterSVG is
      * @param _id uint256 ID of the token to query
      * @param _svg base64 encoded svg image data
      */
-    function setSVG(uint256 _id, string calldata _svg) public onlyAdminOrOwner {
+    function setSVG(
+        uint256 _id,
+        string calldata _svg,
+        bool _isEncoded
+    ) public onlyAdminOrOwner {
         require(
             _exists(_id),
             "ERC1155WithOperatorFilterSVG#setSVG: NONEXISTENT_TOKEN"
         );
         tokenInfos[_id].svg = _svg;
+        tokenInfos[_id].isEncoded = _isEncoded;
     }
 
     /**
@@ -138,7 +156,7 @@ abstract contract ERC1155WithOperatorFilterSVG is
      * @param _initialSupply amount to supply the first owner
      * @param _maxSupply max quantity
      * @param _svg base64 encoded svg image data
-     * @param _data Data to pass if receiver is contract
+     * @param _isEncoded if svg is base64 encoded for true
      * @return The newly created token ID
      */
     function create(
@@ -147,18 +165,19 @@ abstract contract ERC1155WithOperatorFilterSVG is
         uint256 _maxSupply,
         uint256 _cost,
         string calldata _svg,
-        bytes calldata _data
+        bool _isEncoded
     ) external onlyOwner returns (uint256) {
         uint256 _id = _getNextTokenID();
         _incrementTokenTypeId();
 
-        _mint(_initialOwner, _id, _initialSupply, _data);
+        _mint(_initialOwner, _id, _initialSupply, "");
         tokenInfos[_id] = tokenInfo(
             msg.sender,
             _initialSupply,
             _maxSupply,
             _cost,
-            _svg
+            _svg,
+            _isEncoded
         );
 
         return _id;
@@ -169,13 +188,11 @@ abstract contract ERC1155WithOperatorFilterSVG is
      * @param _to          Address of the future owner of the token
      * @param _id          Token ID to mint
      * @param _quantity    Amount of tokens to mint
-     * @param _data        Data to pass if receiver is contract
      */
     function mint(
         address _to,
         uint256 _id,
-        uint256 _quantity,
-        bytes memory _data
+        uint256 _quantity
     ) public payable {
         require(
             _exists(_id),
@@ -190,7 +207,7 @@ abstract contract ERC1155WithOperatorFilterSVG is
             msg.value >= tokenInfos[_id].cost * _quantity,
             "ERC1155WithOperatorFilterSVG#mint: INSUFFICIENT_VALUE"
         );
-        _mint(_to, _id, _quantity, _data);
+        _mint(_to, _id, _quantity, "");
         tokenInfos[_id].tokenSupply = tokenInfos[_id].tokenSupply + _quantity;
     }
 
